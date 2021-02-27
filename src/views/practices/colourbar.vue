@@ -45,7 +45,7 @@ animation-duration: 5s;
  left: 9vw;
 }
 div:nth-child(7){
-  animation-duration: 6.256s;
+  animation-duration: 3.256s;
  background-color: rgb(228, 33, 33);
  transform:rotate(170deg);
  left: 45vw;

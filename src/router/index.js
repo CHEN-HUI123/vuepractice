@@ -15,6 +15,16 @@ export default new Router({
       path: '/test',
       name: 'test',
       component: () => import('../views/practices/test')
+    },
+    {
+      path: '/login',
+      name: 'login',
+      component: () => import('../views/login/index')
+    },
+    {
+      path: '/pm/studentList',
+      name: 'studentList',
+      component: () => import('../views/pm/myStudents/list')
     }
   ]
 })
