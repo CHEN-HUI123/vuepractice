@@ -5,8 +5,12 @@ import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 import axios from 'axios'
 import Vuex from 'vuex'
+import utils from './assets/js/utils'
+import api from './assets/js/api'
 
 Vue.prototype.$axios = axios
+Vue.prototype.$utils = utils
+Vue.prototype.$api = api
 
 Vue.config.productionTip = false
 

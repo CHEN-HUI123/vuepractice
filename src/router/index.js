@@ -12,6 +12,11 @@ export default new Router({
       component: () => import('../views/practices/colourbar')
     },
     {
+      path: '/fillblanks',
+      name: 'fillblanks',
+      component: () => import('../views/practices/fillBlanks')
+    },
+    {
       path: '/test',
       name: 'test',
       component: () => import('../views/practices/test')
