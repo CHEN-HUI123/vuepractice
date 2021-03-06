@@ -14,7 +14,7 @@ export default new Router({
     {
       path: '/fillblanks',
       name: 'fillblanks',
-      component: () => import('../views/practices/fillBlanks')
+      component: () => import('../views/practices/fillBlank/fillBlanks')
     },
     {
       path: '/test',

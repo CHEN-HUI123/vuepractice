@@ -15,10 +15,13 @@
     background-color: #fcfcfc;
     width: 70px;
     font-family: Arial, Helvetica, sans-serif;
+    word-break: break-all;
+    cursor: pointer;
+    padding: 0 10px;
 }
 </style>
 <template>
-    <div id="blank"></div>
+    <div id="blank" @keydown="noenter($event)"></div>
 </template>
 <script>
 export default {
@@ -29,22 +32,33 @@ export default {
   },
   methods: {
     noenter (e) {
-      this.a(e)
+      if (e.keyCode === 13) {
+        e.preventDefault()
+      }
     },
     editstr () {
       let str = this.datastr
-      let htmlstr = str.replace(/replace/g, '<span contenteditable=true class="content" @keydown="noenter($event)">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>')
+      let htmlstr = str.replace(/replace/g, '<span contenteditable=true class="content"></span>')
       document.getElementById('blank').innerHTML = htmlstr
     }
   },
   mounted () {
     this.editstr()
-    let that = this
-    that.a = function (e) {
-      if (e.keyCode === 13) {
-        e.preventDefault()
-      }
-    }
   }
 }
 </script>
+
+<!--知识点：
+contenteditable="true|false"    属性指定元素内容是否可编辑。
+replace(char searchChar, char newChar) 通过用 newChar 字符替换字符串中出现的所有 searchChar 字符，并返回替换后的新字符串。
+keydown   当按钮被按下时，发生 keydown 事件。
+css：
+outline: none;
+word-break: break-all;
+
+v-html
+v-html会将元素当成HTML标签解析后输出
+
+v-text
+v-text会将元素当成纯文本输出
+-->
