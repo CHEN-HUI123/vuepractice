@@ -1,11 +1,13 @@
 <style>
 #blank{
-    height: 300px;
-    width: 20vw;
+    width: 210px;
     padding-top: 25px;
     font-size: 20px;
     background-color: #fcfcfc;
     font-family: Arial, Helvetica, sans-serif;
+    word-break: normal;
+    word-wrap: break-word;
+    white-space: normal;
 }
 .content{
     border-bottom: 1px solid #000;
@@ -15,7 +17,7 @@
     background-color: #fcfcfc;
     width: 70px;
     font-family: Arial, Helvetica, sans-serif;
-    word-break: break-all;
+    /* word-break: break-all; */
     cursor: pointer;
     padding: 0 10px;
 }
@@ -54,7 +56,8 @@ replace(char searchChar, char newChar) 通过用 newChar 字符替换字符串�
 keydown   当按钮被按下时，发生 keydown 事件。
 css：
 outline: none;
-word-break: break-all;
+word-break: break-all;   word-break 自动换行处理方法  允许在单词内换行    （normal break-all keep-all）
+white-space 属性设置如何处理元素内的空白  noraml pre nowrap pre-wrap pre-line  inherit
 
 v-html
 v-html会将元素当成HTML标签解析后输出

@@ -30,6 +30,11 @@ export default new Router({
       path: '/pm/studentList',
       name: 'studentList',
       component: () => import('../views/pm/myStudents/list')
+    },
+    {
+      path: '/paragraph',
+      name: 'paragraph',
+      component: () => import('../views/practices/paragraph')
     }
   ]
 })
